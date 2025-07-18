@@ -5,7 +5,7 @@ from datetime import datetime
 # Generate log filename
 LOG_FILE = f"{datetime.now().strftime('%Y_%m_%d_%H_%M_%S')}.log"
 
-# Just the directory (no filename)
+# Just the directory
 logs_dir = os.path.join(os.getcwd(), "logs")
 os.makedirs(logs_dir, exist_ok=True)
 
