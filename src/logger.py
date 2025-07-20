@@ -15,6 +15,9 @@ LOG_FILE_PATH = os.path.join(logs_dir, LOG_FILE)
 # Setup logging
 logging.basicConfig(
     filename=LOG_FILE_PATH,
-    format="[%(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s",
+    format="[%(asctime)s] %(levelname)s [%(filename)s:%(lineno)d - %(funcName)s()] - %(message)s",
     level=logging.INFO
 )
+
+# Create logger object
+logger = logging.getLogger(__name__)
