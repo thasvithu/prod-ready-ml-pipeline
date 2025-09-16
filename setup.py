@@ -27,5 +27,10 @@ setup(
     author='Vimalathas Vithusan',             # Author's name
     author_email='thasvithu7@gmail.com',      # Author's email
     packages=find_packages(),                 # Automatically discover all packages in the project
-    install_requires=get_requirements('requirements.txt')  # Install external dependencies from file
+    install_requires=get_requirements('requirements.txt'),  # Install external dependencies from file
+    entry_points={
+        'console_scripts': [
+            'ml-train=src.pipeline.train_pipeline:run_training_pipeline',
+        ],
+    },
 )
